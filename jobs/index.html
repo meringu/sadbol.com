@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>Sadbol Jobs</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'>
+    <link href='/favicon.ico' rel='icon' type='image/png'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='/jobs/index.js'></script>
+  </head>
+  <body>
+    <nav class='navbar navbar-inverse navbar-static-top' style='margin-bottom:0px'>
+      <div class='container'>
+        <div class='container-fluid'>
+          <div class='navbar-header'>
+            <button class='navbar-toggle collapsed' data-target='#navbar' data-toggle='collapse' type='button'>
+              <span class='sr-only'>Toggle navigation</span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+              <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' href='/'>
+              Sadbol
+            </a>
+          </div>
+          <div class='navbar-collapse collapse' id='navbar'>
+            <ul class='nav navbar-nav'>
+              <li class='active'>
+                <a href='/jobs'>
+                  Jobs
+                </a>
+              </li>
+              <li>
+                <a href='http://plex.sadbol.com'>
+                  Plex
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class='container' style='margin-top:20px'>
+      <h1>
+        Jobs
+      </h1>
+      <div class='input-group'>
+        <span class='input-group-addon'>
+          Flatmate:
+        </span>
+        <select class='form-control' id='dropdown' onchange='dropdown_changed();'>
+          <option value='0'>Everyone</option>
+          <option value='1'>Chlo&eacute;</option>
+          <option value='2'>Hayden</option>
+          <option value='3'>Henry</option>
+          <option value='4'>Laura</option>
+        </select>
+      </div>
+      <br>
+      <div class='collapse' id='job-everyone'>
+        <div>
+          <p>Everyone</p>
+          <ul>
+            <li>Dishes</li>
+            <ul>
+              <li>Rinse dishes.</li>
+              <li>If dishwasher is full, set it off.</li>
+              <li>If dishwasher is clean unload it.</li>
+              <li>Clean after you cook</li>
+            </ul>
+            <li>Clean bench and hobs.</li>
+            <li>Open windows to air house.</li>
+            <li>Update shopping list.</li>
+            <li>Check windows are shut before going out.</li>
+          </ul>
+        </div>
+      </div>
+      <div class='collapse' id='job-bathroom'>
+        <div>
+          <p>Bathroom bitch</p>
+          <ul>
+            <li>Wash:</li>
+            <ul>
+              <li>Hand towel.</li>
+              <li>Bathmat.</li>
+              <li>Bathroom towels.</li>
+              <li>Tea towel basket in kitchen.</li>
+              <li>Towels in the shed.</li>
+            </ul>
+            <li>Clean:</li>
+            <ul>
+              <li>Basin.</li>
+              <li>Toilet.</li>
+              <li>Shower.</li>
+              <li>Mirror.</li>
+              <li>Shelves.</li>
+            </ul>
+          </ul>
+          <p>Next week Cinderella</p>
+        </div>
+      </div>
+      <div class='collapse' id='job-cop'>
+        <div>
+          <p>Flat cop</p>
+          <ul>
+            <li>Three week rotation:</li>
+            <ul>
+              <li>This week:</li>
+              <ul>
+                <li id='flat-cop-0'></li>
+              </ul>
+              <li>Next week:</li>
+              <ul>
+                <li id='flat-cop-1'></li>
+              </ul>
+              <li>Following week:</li>
+              <ul>
+                <li id='flat-cop-2'></li>
+              </ul>
+            </ul>
+            <li>Wipe down kitchen surfaces.</li>
+            <ul>
+              <li>Range hood.</li>
+              <li>Splatter Wall behind hob.</li>
+              <li>Toaster.</li>
+              <li>Appliances.</li>
+              <li>Tap.</li>
+            </ul>
+            <li>Ritual to hand over flat cop power at end of week.</li>
+            <li>Monitor float, arrange flat meeting to reimburse.</li>
+            <li>Arrange flat meeting.</li>
+          </ul>
+          <p>Next week bathroom bitch</p>
+        </div>
+      </div>
+      <div class='collapse' id='job-gardening'>
+        <div>
+          <p>Grounds keeper</p>
+          <ul>
+            <li>Water garden daily.</li>
+            <li>Wednesday:</li>
+            <ul>
+              <li>Empty kitchen bin.</li>
+              <li>Empty Bathroom bin.</li>
+              <li>Put out Recycling:</li>
+              <ul>
+                <li id='gardening-0'></li>
+                <li id='gardening-1'></li>
+              </ul>
+              <li>Compress rubbish bag.</li>
+              <li>Put out rubbish if full.</li>
+            </ul>
+            <li>Check mailbox.</li>
+          </ul>
+          <p>Next week flat cop</p>
+        </div>
+      </div>
+      <div class='collapse' id='job-sweeping'>
+        <div>
+          <p>Cinderella</p>
+          <ul>
+            <li>Clean:</li>
+            <ul>
+              <li>Kitchen table.</li>
+              <li>Kitchen chairs.</li>
+              <li>Coffee table.</li>
+              <li>Couches.</li>
+            </ul>
+            <li>Dust:</li>
+            <ul>
+              <li>TV and cabinet.</li>
+              <li>Window sills.</li>
+              <li>Fireplace.</li>
+              <li>Fusball table.</li>
+              <li>Skirting boards.</li>
+            </ul>
+            <li>Hall rug.</li>
+            <li>Sweep or vacuum:</li>
+            <ul>
+              <li>Floors.</li>
+              <li>Doorsteps.</li>
+              <li>Porches.</li>
+            </ul>
+          </ul>
+          <p>Next week grounds keeper</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
